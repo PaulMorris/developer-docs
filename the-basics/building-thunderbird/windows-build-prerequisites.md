@@ -22,7 +22,7 @@ Messaging Application Programming Interface \(**MAPI**\) is an API for Microsoft
 You can get the MAPI header files from: [https://www.microsoft.com/en-us/download/details.aspx?id=12905](https://www.microsoft.com/en-us/download/details.aspx?id=12905) 
 {% endhint %}
 
-Copy the header files to a Windows SDK include directory so that the build process will find the files.
+The download for "Outlook 2010 MAPI Header Files" decompresses to 18 files but we only need 17 of them. Copy all the files _except for_ "MAPI.h" to a Windows SDK include directory so that the build process will find the files.
 
 For Windows 8, that directory will be:
 
@@ -31,6 +31,8 @@ For Windows 8, that directory will be:
 For Windows 10, the directory will be:
 
  `C:\Program Files (x86)\Windows Kits\10\Include\10.0.nnnnn.0\shared` where `nnnnn` is the highest number present on the system.
+
+("MAPI.h" doesn't need to be copied because it should already be available. For Windows 10 it should already be in C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um\MAPI.h)
 
 ### **Visual Studio**
 
